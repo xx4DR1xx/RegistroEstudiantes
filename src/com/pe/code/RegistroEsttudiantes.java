@@ -17,9 +17,20 @@ public class RegistroEsttudiantes {
 
         System.out.print("Ingrese edad: ");
         int edad = teclado.nextInt();
+        
+        double nota;
+        
+        do{
+            System.out.println("Ingrese nota (0 - 20):");
+            nota = teclado.nextDouble();
+            
+            if(nota < 0 || nota > 20){
+                System.out.println("Nota invalida. Intente nuevamente");
+            }
+            
+        }while(nota < 0 || nota > 20);
 
-        System.out.print("Ingrese nota: ");
-        double nota = teclado.nextDouble();
+
 
         System.out.println("\n=== DATOS REGISTRADOS ===");
         System.out.println("Nombre: " + nombre);
